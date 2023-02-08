@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.expanding-cards {
+    min-height: 700px;
+    display: flex;
+    overflow-x: hidden;
+}
+
+.expanding-cards__card {
+    display: inline-block;
+    min-width: 200px;
+    width: calc(100% / 4);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    transition: all 0.5s cubic-bezier(.05, .61, .41, .95);
+}
+
+
+
+.expanding-cards__card:hover {
+    cursor: pointer;
+}
+
+.expanding-cards__card img {
+    margin: 0 0 25px 25px;
+    width: 150px;
+}
+
+
+.expanding-cards__card.expanded {
+    transition: all 0.5s cubic-bezier(.05, .61, .41, .95);
+}
